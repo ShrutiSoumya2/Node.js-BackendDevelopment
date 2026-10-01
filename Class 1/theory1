@@ -1,0 +1,14 @@
+types of logic:
+1. create = post request (front to back)(data flow with frontend as respect by default)
+2. read = get request (back to front)
+3. update = put request
+4. partial/minimum update = patch request
+5. delete = delete request
+http protocol(raw data transfer, not secure)
+https(data is encrypted when transferred)
+npm is a global server of packages made by developers as addition to node.js
+module is a piece of code that can be used in another file as well
+modules types:
+1. core/inbuilt
+2. user defined
+3. third party
