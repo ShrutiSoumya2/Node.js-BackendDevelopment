@@ -1,0 +1,20 @@
+$kind: http-request
+name: New Request
+url: http://localhost:5000/api/products
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Wireless Keyboard\",\r
+
+    \  \"category\": \"Electronics\",\r
+
+    \  \"price\": 2000,\r
+
+    \  \"quantity\": 5,\r
+
+    \  \"reorderLevel\": 9\r
+
+    }"
+order: 3000

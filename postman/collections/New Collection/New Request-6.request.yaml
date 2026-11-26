@@ -1,0 +1,5 @@
+$kind: http-request
+name: New Request
+url: http://localhost:5000/api/products/6b06610cab24142c07f549f8
+method: GET
+order: 7000

@@ -7,7 +7,7 @@ const port = 3000;
 app.get('/user',(req,res)=>{
     try{
         res.json({
-        message : 'this is user routes..'
+        message : 'this is user routes.'
     })
     } catch (error) {
         res.json({ 
@@ -19,10 +19,10 @@ app.get('/user',(req,res)=>{
 
 function checkroutes(req,res){  
     res.json({
-        message : 'this routes is not found..'
+        message : 'this routes is not found'
     })
 }
-app.use(checkroutes);  //runs in order of declaration therefore this should be declared at the end of all routes
+app.use(checkroutes);  
 app.listen(port, () => {
     console.log(`Server is running on port`, port);
 })

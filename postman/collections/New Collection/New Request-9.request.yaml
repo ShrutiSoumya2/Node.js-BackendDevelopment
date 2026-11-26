@@ -1,0 +1,14 @@
+$kind: http-request
+name: New Request
+url: http://localhost:5000/api/products/6b06610cab24142c07f549f8
+method: DELETE
+body:
+  type: json
+  content: "{\r
+
+    \  \"price\": 649,\r
+
+    \  \"reorderLevel\": 8\r
+
+    }"
+order: 8570
