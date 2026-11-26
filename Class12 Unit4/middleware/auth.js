@@ -2,8 +2,16 @@ import jwt from 'jsonwebtoken'
 
 const auth = async (req,res,next)=>{
     try {
-
-        const token  = req.headers.authorization.split(' ')[1]
+        let token 
+        if (!req.headers.authorization) {
+            token  = req.headers.authorization.split(' ')[1]
+        }else{
+            return res.status(404).json({
+                message:"token not found",
+                success:false
+            })
+        }
+        console.log(token)
 
         const payload = await jwt.verify(token , 'bcaSecA' )
 
@@ -54,8 +62,20 @@ const isStudent = async(req,res, next)=>{
 
 const isTeacher = async(req,res,next)=>{
     try {
-        
+        const role = req.role
+
+        if(role !== 'Teacher'){
+            return res.status(401).json({
+                message:"your not Teacher",
+                success:false
+            })
+        }
+        next()
     } catch (error) {
+        return res.status(500).json({
+            message:"internal server error",
+            success:false
+        })
         
     }
 }
